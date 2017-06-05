@@ -1,18 +1,14 @@
 WINDOW = require("lovely-windows")
 
-local w = {
-	f1 = 1024,
-	f2 = 320
+local table = {
+	f1 = {1024,720},
+	f2 = {720,600}
 }
 
-local h = {
-	f1 = 720,
-	f2 = 200
-}
 
 function love.load()
 	WINDOW.initialize(320,200)
-	WINDOW.addInputTable(w,h)
+	WINDOW.addInputTable(table)
 end
 
 function love.update(dt)

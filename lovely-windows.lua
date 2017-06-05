@@ -61,10 +61,8 @@ function WINDOW.addInputTable(width,height)
 	if width ~= nil and height ~= nil then
 		if type(width) == "table" and type(height) == "table" then
 			for k,v in pairs(width) do
-				WIDTH[k] = v
-			end
-			for k,v in pairs(height) do
-				HEIGHT[k] = v
+				WIDTH[k] = v[1]
+				HEIGHT[k] = v[2]
 			end
 		end
 	end

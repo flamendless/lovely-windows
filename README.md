@@ -22,14 +22,9 @@ You can use any variable name if you don't like "WINDOWS"...Try using "MAC" *pun
 ```lua
 WINDOWS = require("path-to-lovely-windows")
 
-local width = {
-	f1 = 1024,
-	f2 = 720,
-}
---key inputs in height table should be the same as in the width table
-local height = {
-	f1 = 720,
-	f2 = 640
+local table = {
+	f1 = {1024,720},
+	f2 = {720,600}
 }
 --so if the user press f1, the new window size will be 1024x720
 ```
@@ -40,7 +35,7 @@ function love.load()
 	WINDOW.initialize(320,200) -- your custom game size (note: it is not the same as the window size)
 	
 	--then add the table to the module
-	WINDOW.addInputTable(width,height) --parameters are the table we created earlier
+	WINDOW.addInputTable(table) --parameters are the table we created earlier
 end
 ```
 
