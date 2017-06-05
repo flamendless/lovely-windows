@@ -10,10 +10,6 @@ function love.load()
 	WINDOW.addInputTable(table)
 end
 
-function love.update(dt)
-	WINDOW.update(dt)
-end
-
 function love.keypressed(key)
 	WINDOW.keyInput(key)
 end

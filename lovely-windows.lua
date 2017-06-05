@@ -12,9 +12,7 @@ local _window = {}
 local WIDTH = {}
 local HEIGHT = {}
 
-local canSwitch = true
-local maxTimer = 2
-local timer = maxTimer
+local currentMode = "f1"
 
 function WINDOW.initialize(gameWidth,gameHeight)
 	_window.windowWidth = love.graphics.getWidth()
@@ -29,20 +27,6 @@ function WINDOW.getRatio()
 	return _window.ratio
 end
 
-function WINDOW.update(dt)
-	if canSwitch == false then
-		timer = timer - 1 * dt
-		if timer <= 0 then
-			canSwitch = true
-			timer = maxTimer
-		end
-	end
-end
-
-function WINDOW.setTimer(time)
-	maxTimer = time
-end
-
 function WINDOW.keyInput(key)
 	if WIDTH[key] ~= nil then
 		WINDOW.switch(key)
@@ -50,10 +34,10 @@ function WINDOW.keyInput(key)
 end
 
 function WINDOW.switch(key)
-	if canSwitch then
+	if key ~= currentMode then
 		love.window.setMode(WIDTH[key], HEIGHT[key])
 		WINDOW.initialize(_window.gameWidth,_window.gameHeight)
-		canSwitch = false
+		currentMode = key
 	end
 end
 

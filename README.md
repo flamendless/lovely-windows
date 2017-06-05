@@ -39,12 +39,8 @@ function love.load()
 end
 ```
 
-4. ETC ETC ETC
+4. Recognizing Inputs
 ```lua
-function love.update(dt)
-	WINDOW.update(dt)
-end
-
 function keypressed(key)
 	WINDOW.keyInput(key)
 end
@@ -55,8 +51,6 @@ end
 # OTHER FUNCTIONS
 
 ## WINDOW.getRatio() - returns the calculated ratio, useful for using love.graphics.scale()
-
-## WINDOW.setTimer(timer) - change the cooldown before changing the screen size, dont use 0, to avoid repeated changes in a single key stroke.
 
 ## WINDOW.listInput() - prints all the width and height sizes you've added. Useful with the LOVEDEBUG library
 
