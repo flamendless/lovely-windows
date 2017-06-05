@@ -57,13 +57,11 @@ function WINDOW.switch(key)
 	end
 end
 
-function WINDOW.addInputTable(width,height)
-	if width ~= nil and height ~= nil then
-		if type(width) == "table" and type(height) == "table" then
-			for k,v in pairs(width) do
-				WIDTH[k] = v[1]
-				HEIGHT[k] = v[2]
-			end
+function WINDOW.addInputTable(tab)
+	if type(tab) == "table" then
+		for k,v in pairs(tab) do
+			WIDTH[k] = v[1]
+			HEIGHT[k] = v[2]
 		end
 	end
 end

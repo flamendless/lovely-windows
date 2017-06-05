@@ -5,7 +5,6 @@ local table = {
 	f2 = {720,600}
 }
 
-
 function love.load()
 	WINDOW.initialize(320,200)
 	WINDOW.addInputTable(table)
@@ -16,5 +15,5 @@ function love.update(dt)
 end
 
 function love.keypressed(key)
-	WINDOW.keypressed(key)
+	WINDOW.keyInput(key)
 end
