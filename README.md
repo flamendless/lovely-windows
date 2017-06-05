@@ -7,7 +7,8 @@
 * keypress/keyrelease - you choose what you want!
 * Handles/calculates ratio of the game for scaling!
 
-## You can also look at sample.lua
+## You can also look at [sample](sample.lua)
+## Love2d Forums [thread](https://love2d.org/forums/viewtopic.php?f=5&t=84009)
 
 ## BASIC USAGE:
 1. Require the module,
