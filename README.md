@@ -62,4 +62,4 @@ end
 ## Or you can issue if you have a problem
 
 # LICENSE
-This module/library is free. Do what you want.
+This module/library is under the MIT license.
